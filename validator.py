@@ -20,7 +20,7 @@ def lengthValidator(input, length) -> bool:
         return False
 
 def floatValidator(float) -> bool:
-    if re.fullmatch(r'\d+(\.\d*)?|\.\d+', float):
+    if re.fullmatch(r'^-?(\d+(\.\d*)?|\.\d+)$', float):
         # RegEx mengecek jika angka seperti 2.5 atau .5
         return True
     else:
