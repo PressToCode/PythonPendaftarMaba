@@ -35,7 +35,7 @@ def optionOne():
     if listMaba.get(int(nim)) is None:
         listMaba[int(nim)] = [name, prodi, ipk]
     else:
-        print("Data Mahasiswa Lama Ditemukan:")
+        print("\nData Mahasiswa Lama Ditemukan:")
         print("Nama\t:" + listMaba[int(nim)][0])
         print("NIM\t\t:" + str(nim))
         print("Prodi\t:" + listMaba[int(nim)][1])
