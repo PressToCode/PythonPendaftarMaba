@@ -32,7 +32,16 @@ def optionOne():
         print('Input Invalid!\n')
 
     # NIM tidak akan duplikat, akan di override
-    listMaba[int(nim)] = [name, prodi, ipk]
+    if listMaba.get(int(nim)) is None:
+        listMaba[int(nim)] = [name, prodi, ipk]
+    else:
+        print("Data Mahasiswa Lama Ditemukan:")
+        print("Nama\t:" + listMaba[int(nim)][0])
+        print("NIM\t\t:" + str(nim))
+        print("Prodi\t:" + listMaba[int(nim)][1])
+        print("IPK\t\t:" + listMaba[int(nim)][2])
+        if input('Timpa Data Mahasiswa yang Lama (y/n)? ') == 'y':
+            listMaba[int(nim)] = [name, prodi, ipk]
 
 # Opsi 02) Tampilkan Semua Mahasiswa
 def optionTwo():
