@@ -27,7 +27,7 @@ def optionOne():
 
     while True:
         ipk = input('IPK: ')
-        if (validator.numberValidator(ipk)) or (validator.floatValidator(ipk)):
+        if ((validator.numberValidator(ipk)) or (validator.floatValidator(ipk))) and (float(ipk) >= 0.0 and float(ipk) <= 4.0):
             break
         print('Input Invalid!\n')
 
